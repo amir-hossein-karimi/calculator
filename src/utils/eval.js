@@ -16,6 +16,8 @@ const doAction = (key, numbers) => {
   }
 };
 
+export const test = 1;
+
 export const evalFunc = (arr) => {
   let newArr = arr;
 
