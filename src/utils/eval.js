@@ -1,5 +1,3 @@
-export const testArr = ['33', '+', '33', '*', '53'];
-
 const doAction = (key, numbers) => {
   const [num1, num2] = numbers;
   switch (key) {
