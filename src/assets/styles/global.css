@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Toastify__toast {
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-family: 'YekanBakh' !important;
+    margin: 8px !important;
+}
+
+.Toastify__toast--error {
+    background-color: red !important;
+}
+
+.Toastify__toast--success {
+    background-color: #008000 !important;
+}
+
+.Toastify__toast--info {
+    background-color: #3498db !important;
+}
