@@ -17,7 +17,7 @@ const Calculator = () => {
       setResult(calc || '');
     },
     delete() {
-      if (calcState[calcState.length - 1].length === 1) {
+      if (calcState[calcState?.length - 1]?.length === 1) {
         setCalcState((perv) => {
           const popedData = perv;
           popedData.pop();
@@ -25,8 +25,8 @@ const Calculator = () => {
         });
       } else {
         setCalcState((perv) => {
-          const stringedData = perv.join(' ');
-          return stringedData.substring(0, stringedData.length - 1).split(' ');
+          const stringedData = perv?.join(' ');
+          return stringedData?.substring(0, stringedData?.length - 1).split(' ');
         });
       }
       this.showResult();
