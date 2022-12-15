@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: '.5rem',
+    padding: '.5rem .5rem 0',
     backdropFilter: 'blur(2rem)',
     background: 'rgba(0, 0, 0, 0.2)',
   },
@@ -42,7 +42,7 @@ const useStyles = makeStyles(() => ({
     minHeight: '20rem',
 
     '& > :hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      backgroundColor: 'rgba(255, 255, 255, 0.2) !important',
     },
 
     '& > #showResult': {
