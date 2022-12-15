@@ -80,21 +80,25 @@ const Calculator = () => {
 
   return (
     <Box className={classes.root}>
-      <Box>
-        {isShowResult ? (
-          <Typography>{result}</Typography>
-        ) : (
-          calcState.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <span key={`${item}${index}`}>{item}</span>
-          ))
-        )}
+      <Box className={classes.calculatorContainer}>
+        <Box className={classes.calculatorMonitor}>
+          {isShowResult ? (
+            <Typography>{result}</Typography>
+          ) : (
+            calcState.map((item, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <Typography key={`${item}${index}`}>{item}</Typography>
+            ))
+          )}
+        </Box>
+        <Box className={classes.buttonsContainer}>
+          {[...calculatorKeys, ...opratorsKey, ...helperKeys].map((item) => (
+            <CalculatorKey key={item} onClick={() => handleClickItems(item)} id={item}>
+              {helperKeysTranslator[item] || item}
+            </CalculatorKey>
+          ))}
+        </Box>
       </Box>
-      {[...calculatorKeys, ...opratorsKey, ...helperKeys].map((item) => (
-        <CalculatorKey key={item} onClick={() => handleClickItems(item)}>
-          {helperKeysTranslator[item] || item}
-        </CalculatorKey>
-      ))}
     </Box>
   );
 };
