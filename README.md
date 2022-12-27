@@ -1,1 +1,1 @@
-this is a simple calculator
+this is a simple calculator made using react and show javascript power
